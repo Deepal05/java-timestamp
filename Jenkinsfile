@@ -3,10 +3,10 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Deepal05/java-timestamp.git'
+                git 'https://github.com/your-username/java-timestamp.git'
             }
         }
-        stage('Build') {
+        stage('Compile') {
             steps {
                 sh 'javac TimestampPrinter.java'
             }
