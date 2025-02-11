@@ -6,6 +6,6 @@ public class TimestampPrinter {
         LocalDateTime now = LocalDateTime.now();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         String formattedDateTime = now.format(formatter);
-        System.out.println("Current Timestamp: " + formattedDateTime);
+        System.out.println("The current Timestamp: " + formattedDateTime);
     }
 }
