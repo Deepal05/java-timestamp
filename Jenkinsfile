@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/your-username/java-timestamp.git'
+                git 'https://github.com/Deepal05/java-timestamp.git'
             }
         }
         stage('Compile') {
