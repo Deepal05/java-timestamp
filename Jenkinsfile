@@ -1,19 +1,22 @@
 pipeline {
     agent any
+    triggers {
+        githubPush()
+    }
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/Deepal05/java-timestamp.git'
+                git 'https://github.com/Deepal05/java-timestamp.git'
             }
         }
-        stage('Compile') {
+        stage('Build') {
             steps {
-                bat 'javac TimestampPrinter.java'
+                sh 'javac Timestamp.java'
             }
         }
         stage('Run') {
             steps {
-                bat 'java TimestampPrinter'
+                sh 'java Timestamp'
             }
         }
     }
